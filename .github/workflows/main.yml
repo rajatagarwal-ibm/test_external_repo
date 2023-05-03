@@ -1,0 +1,17 @@
+name: Sync Issues
+
+on:
+  issues:
+    types: [opened, edited, closed]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Sync issues
+      env:
+        GITHUB_TOKEN: ${{ secrets.INTERNAL_GITHUB_TOKEN }}
+      run: |
+        print("run")

@@ -14,4 +14,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.INTERNAL_GITHUB_TOKEN }}
       run: |
-        print("run")
+        echo "run"
